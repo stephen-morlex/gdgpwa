@@ -33,16 +33,23 @@ const showSpeakers = () => {
     ({ name, image, company, title }) =>
       (output += `
        
-                <div class="card">
+                <div class="">
                   <img class="card--avatar" src=${image} />
                   <h1 class="card--title">${name}</h1>
-                  <span class="card--link" href="#">${company}</span>
-                  <span class="card--link" href="#">${title}</span>
+                  <h4 class="card--company" href="#">${company}</h4>
+                  <p class="card--link" href="#">${title}</p>
                 </div>
                 `)
   );
   container.innerHTML = output;
 };
+
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", showSpeakers);
 

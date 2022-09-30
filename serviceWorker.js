@@ -19,6 +19,7 @@ self.addEventListener("install", installEvent => {
       cache.addAll(assets)
     })
   )
+  
 })
 
 

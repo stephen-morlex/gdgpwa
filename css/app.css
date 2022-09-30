@@ -10,7 +10,7 @@ body {
   font-size: 1rem;
 }
 main {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   padding: 0.5rem;
   text-align: center;
@@ -20,6 +20,9 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+a {
+  text-decoration: none;
+}
 ul {
   list-style: none;
   display: flex;
@@ -28,48 +31,112 @@ ul {
 li {
   margin-right: 1rem;
 }
-h1 {
+li a {
+  text-decoration: none;
+  color: #5f6368;
+  font-weight: 500;
+}
+h1 a {
   color: #4114bd;
   margin-bottom: 0.5rem;
 }
-
+.intro {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.intro h1 {
+  font-weight: 400;
+  font-size: 44px;
+  margin-bottom: 3rem;
+}
+.intro p {
+  font-weight: 400;
+}
 .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem 0;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20rem;
+  height: 20rem;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+}
+.card--avatar {
+  width: 100%;
+  height: 15rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.card--title {
+  color: #5f6368;
+  font-weight: 700;
+  line-height: 23px;
+  text-transform: capitalize;
+  font-size: 21px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.speaker h1 {
+  font-weight: 500;
+  font-size: 44px;
+  margin-bottom: 3rem;
+  margin-top: 70px;
+}
+.card--link {
+  text-decoration: none;
+  color: gray;
+  border-radius: 20px;
+  margin-top: 0.5rem;
+}
+.card--company {
+  color: gray;
+  /* padding: 0.3rem 1rem;  */
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
   }
-  .card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 15rem auto;
-    height: 15rem;
-    background: #fff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 10px;
-    margin: auto;
-    overflow: hidden;
+ 
+  .intro {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+  .intro h1 {
+    font-weight: 400;
+    font-size: 44px;
+    margin-bottom: 3rem;
+  }
+  .intro p {
+    font-weight: 400;
   }
   .card--avatar {
     width: 100%;
-    height: 10rem;
+    height: 20rem;  
+    border-radius: 100%;
     object-fit: cover;
   }
-  .card--title {
-    color: #222;
-    font-weight: 700;
-    text-transform: capitalize;
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-  }
-  .card--link {
+  li a {
     text-decoration: none;
-    background: #db4938;
-    color: #fff;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
+    color: #5f6368;
+    font-weight: 500;
   }
+}

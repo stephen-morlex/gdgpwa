@@ -1,0 +1,30 @@
+
+{
+    "speakers":
+[
+    {
+      "name": "Unguec Stephen",
+      "company": "NCA South Sudan",
+      "title": "Assistant Director for Cyber Security",
+      "image": "images/1.webp"
+    },
+    {
+      "name": "Stephen Victor Yuggu",
+      "company": "Securiport LLC",
+      "title": "Software Developer",
+      "image": "images/2.webp"
+    },
+    {
+      "name": "Peter Nyuol Majok",
+      "company": "Ain Shams university",
+      "title": "Student",
+      "image": "images/3.webp"
+    },
+    {
+      "name": "Eva Yai",
+      "company": "Go-Girls ICT",
+      "title": "Co-Founder",
+      "image": "images/4.webp"
+    }
+  ]
+}
