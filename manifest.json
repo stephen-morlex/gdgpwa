@@ -1,0 +1,23 @@
+{
+    "name": "GDG DEVFEAST",
+    "short_name": "GDG",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/images/icons/1.webp",
+        "type": "image/webp", "sizes": "72x72"
+      },
+      {
+        "src": "/images/icons/2.webp",
+        "type": "image/webp", "sizes": "96x96"
+      },
+      {
+        "src": "/images/icons/3.webp.png",
+        "type": "image/webp","sizes": "128x128"
+      }
+    ]
+  }
