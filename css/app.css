@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #fdfdfd;
+  background: #F8F8F8;
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
 }
@@ -36,8 +36,10 @@ li a {
   color: #5f6368;
   font-weight: 500;
 }
-h1 a {
+ a img {
   color: #4114bd;
+  width: 60px;
+  height: 60px;
   margin-bottom: 0.5rem;
 }
 .intro {
