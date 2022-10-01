@@ -28,10 +28,32 @@ self.addEventListener("activate", event => {
 });
 
 // let's fetch our cache.
-self.addEventListener("fetch", fetchEvent => {
-    fetchEvent.respondWith(
-      caches.match(fetchEvent.request).then(res => {
-        return res || fetch(fetchEvent.request)
-      })
-    )
-  })
+// self.addEventListener("fetch", fetchEvent => {
+//     fetchEvent.respondWith(
+//       caches.match(fetchEvent.request).then(res => {
+//         return res || fetch(fetchEvent.request)
+//       })
+//     )
+//   })
+self.addEventListener('fetch', function (event) {
+    var requestURL = new URL(event.request.url);
+    var freshResource = fetch(event.request).then(function (response) {
+        var clonedResponse = response.clone();
+        // Don't update the cache with error pages!
+        if (response.ok) {
+            // All good? Update the cache with the network response
+            caches.open(staticGDG).then(function (cache) {
+                cache.put(event.request, clonedResponse);
+            });
+        }
+        return response;
+    });
+    var cachedResource = caches.open(staticGDG).then(function (cache) {
+        return cache.match(event.request).then(function(response) {
+            return response || freshResource;
+        });
+    }).catch(function (e) {
+        return freshResource;
+    });
+    event.respondWith(cachedResource);
+});
